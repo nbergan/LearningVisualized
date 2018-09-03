@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <div id = "hero">
-        <video autoplay muted loop id="heroVideo">
+    <div id = "hero" class="tint">
+        <video autoplay muted loop id="heroVideo" >
             <source src="NateRobot.mp4" type="video/mp4">
         </video>
         <div class="videoContent">
             <h1>Learning Visualized</h1>
             <h3>Seeing the unseen world of code</h3>
-            <button class="navButton" onclick="goToVideos()">Open Your Eyes!</button>
+            <a class="navButton" onclick="goToVideos()">Open Your Eyes!</a>
         </div>
     </div>
 
@@ -32,9 +32,12 @@
     </div>
 
     <div id = "tutorials">
-        <h2>Tutorials</h2>
-
-
+      <h2>Tutorials</h2>
+      <div class="buttons">
+        <button class="btn-6"><span>option 1</span></button>
+        <button class="btn-6"><span>option 2</span></button>
+        <button class="btn-6"><span>option 3</span></button>
+      </div>
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="scripts.js"></script>

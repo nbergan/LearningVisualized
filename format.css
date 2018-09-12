@@ -1,8 +1,24 @@
 .ml9 {
-  position: relative;
   display: block;
   margin: 0 auto;
   text-align: center;
+  color: white;
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+}
+
+.preloader {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 10000000000;
+   background-color: #343F4A;
+   background-position: center;
 }
 
 .ml9 .text-wrapper {
@@ -348,4 +364,8 @@ span::before, span::after{
     font-size: .7rem;
     padding: 0;
   }
+}
+
+#hero, #about, #tutorials{
+  display: none;
 }

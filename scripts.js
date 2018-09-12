@@ -3,6 +3,18 @@ function goToVideos() {
 
 
 }
+$(window).load(function() {
+  window.setInterval(loadContent, 4000)
+});
+
+function loadContent(){
+  $('.preloader').fadeOut('slow');
+  document.getElementById("hero").style.display = "inline-block";
+  document.getElementById("tutorials").style.display = "inline-block";
+  document.getElementById("about").style.display = "inline-block";
+
+}
+
 $('.ml9 .letters').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });

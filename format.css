@@ -1,3 +1,14 @@
+/* Color scheme:
+  main color:#6B7A8F;
+  accents: #F7882F; and #F76331;
+  footer:#AAAAAA;
+  divs:   #DCC7AA;
+
+ */
+
+
+
+
 .ml9 {
   display: block;
   margin: 0 auto;
@@ -17,7 +28,7 @@
    width: 100%;
    height: 100%;
    z-index: 10000000000;
-   background-color: #343F4A;
+   background-color: #6B7A8F;
    background-position: center;
 }
 
@@ -71,7 +82,7 @@ body {
 .navButton{
     background-color: transparent;
     color: white;
-    border: 2px solid #dadfe1;
+    border: 2px solid #DCC7AA;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -87,6 +98,14 @@ body {
     max-height: 50%;
     padding: 0;
     margin-bottom: -5px;
+}
+footer{
+  display:inline-block;
+  vertical-align: top;
+  width: 100%;
+  min-height: 500px;
+  background-color: #AAAAAA;
+  padding: 0;
 }
 #heroVideo {
     right: 0;
@@ -107,18 +126,25 @@ body {
     display:inline-block;
     vertical-align: top;
     width: 100%;
-    background-color: #dadfe1;
+    background-color:   #DCC7AA;
     min-height:500px;
 }
 #tutorials{
   display:inline-block;
   vertical-align: top;
   width: 100%;
-  background-color: #343F4A;
+  background-color: #6B7A8F;
     min-height:500px;
 
 }
-
+.accent1{
+  min-height: 100px;
+  background-color: #F7882F;
+}
+.accent2{
+  min-height: 100px;
+  background-color: #F76331;
+}
 .tint
 {
   position: relative;
@@ -250,7 +276,7 @@ span::before, span::after{
   margin: 20px 30px;
   background: rgba(0,0,0,0.09);
 }
-.buttons span{
+.buttons span, .buttonsTop span{
   display: block;
   padding: 25px 80px;
 }

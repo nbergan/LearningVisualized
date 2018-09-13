@@ -6,9 +6,168 @@
 
  */
 
+.contentDisplayGrid
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+		padding-bottom: 20px;
+}
 
+@supports (display: grid) {
+	.contentDisplayGrid {
+		display: grid;
+		padding: 0;
+		margin: 0;
+		grid-template-columns: 20% 20% 20% 20%;
+		justify-content: center;
+		padding-bottom: 20px;
+	}
+}
+/* start orange display */
+.orangeBack{
+  height: 100px;
+	width: 100px;
+	padding: 10px;
+	overflow: hidden;
+  background-color: #F7882F;
+}
+svg .orangeBack{
+    fill:#6B7A8F;
+    stroke:#F7882F;
+    padding: 200px;
+}
+svg:hover .orangeBack{
+    fill:#F7882F;
+    stroke:#6B7A8F;
+    transition: all .3s linear;
+}
+.orangeBack:hover{
+  background-color: #DCC7AA;
+  transition: all .3s linear;
+}
+/* end orange */
+/* start dark display */
+.darkBack{
+  height: 100px;
+	width: 100px;
+	overflow: hidden;
+  background-color: #AAAAAA;
+}
+svg .darkBack{
+    fill:#F7882F;
+    stroke:#AAAAAA;
+    padding: 200px;
+}
+svg:hover .darkBack{
+    fill:#AAAAAA;
+    stroke:#F7882F;
+    transition: all .3s linear;
+}
+.darkBack:hover{
+  background-color: #F7882F;
+  transition: all .3s linear;
+}
+/* end dark */
+/* start red display */
+.redBack{
+  height: 100px;
+	width: 100px;
+	overflow: hidden;
+  background-color: #F76331;
+}
+svg .redBack{
+    fill:#6B7A8F;
+    stroke:#F76331;
+    padding: 200px;
+}
+svg:hover .redBack{
+    fill:#F76331;
+    stroke:#DCC7AA;
+    transition: all .3s linear;
+}
+.redBack:hover{
+  background-color: #DCC7AA;
+  transition: all .3s linear;
+}
+/* end red */
+/* start yellow display */
+.yellowBack{
+  height: 100px;
+	width: 100px;
+	overflow: hidden;
+  background-color: #F7C331;
+}
+svg .yellowBack{
+    fill:#6B7A8F;
+    stroke:#F7C331;
+    padding: 200px;
+}
+svg:hover .yellowBack{
+    fill:#DCC7AA;
+    stroke:#F7C331;
+    transition: all .3s linear;
+}
+.yellowBack:hover{
+  background-color: #DCC7AA;
+  transition: all .3s linear;
+}
+/* end yellow */
+/* start of standard 100x100 square */
+.standardSquare
+{
+  height: 100px;
+  width: 95%;
+  overflow: hidden;
+  display: block;
+  margin: 10px;
+  padding: 0;
+}
+/* end square */
+/* start of rectangle */
+.rectangle
+{
+  height: 100px;
+  width: 95%;
+  overflow: hidden;
+  display: block;
+  margin: 10px;
+  padding: 0;
+}
+/* end rectangle */
+/* start of largeSquare */
+.largeSquare
+{
+  height: 350px;
+  width: 97%;
+  overflow: hidden;
+  display: block;
+  margin: 10px;
+  padding: 0;
+}
+/* end largeSquare */
+/* every image we add to the grid needs both a unique class and an svg height and width and an orange */
+.display1{
+  grid-column: 1;
+  grid-row: 1;
+}
 
-
+.display2{
+  grid-column: 2;
+  grid-row: 1;
+}
+.display3{
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 2;
+}
+.display4{
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 3;
+}
 .ml9 {
   display: block;
   margin: 0 auto;
@@ -140,6 +299,8 @@ footer{
 .accent1{
   min-height: 100px;
   background-color: #F7882F;
+  width: 50%;
+  float: right;
 }
 .accent2{
   min-height: 100px;
@@ -175,7 +336,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   padding-left: 0;
 }
 .buttons button{
@@ -327,6 +488,13 @@ span::before, span::after{
     display: block;
     padding: 25px;
     font-size: 1rem;
+  }
+  .videoContent{
+    padding: 0;
+  }
+  .buttonsTop span{
+    display: block;
+    padding: 0;
   }
   .headSpan{
     display: block;

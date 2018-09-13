@@ -4,7 +4,7 @@ function goToVideos() {
 
 }
 $(window).load(function() {
-  window.setInterval(loadContent, 0)
+  window.setInterval(loadContent, 3800)
 });
 
 function loadContent(){
@@ -35,3 +35,25 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 20000
   });
+
+function displayGrid(gridLocation){
+   var gridNames = ['grid1', 'grid2', 'grid3'];
+    var gridNumber = gridNames[gridLocation];
+    if(document.getElementById(gridNumber).style.display == "none")
+    {
+        /*Turn on grid*/
+    document.getElementById(gridNumber).style.display = "block";
+        /*Turn off other two*/
+        /*
+        for(var i = 0; i < 3; i++){
+            if(i != gridLocation)
+            {
+             document.getElementById(gridNumber).style.display = "none";
+            }
+        } */
+    }
+    
+    else {
+     document.getElementById(gridNumber).style.display = "none";
+    }
+}

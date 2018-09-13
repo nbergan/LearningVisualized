@@ -49,11 +49,12 @@
     <div id = "tutorials">
       <!-- <h2>Tutorials</h2> -->
       <div class="buttons">
-        <button class="btn-6"><span>Basic Java</span></button>
-        <button class="btn-6"><span>Data Structures</span></button>
-        <button class="btn-6"><span>Complex Methods</span></button>
+        <button onclick="displayGrid(0)" class="btn-6"><span>Basic Java</span></button>
+        <button onclick="displayGrid(1)" class="btn-6"><span>Data Structures</span></button>
+        <button onclick="displayGrid(2)" class="btn-6"><span>Complex Methods</span></button>
       </div>
-      <div class="contentDisplayGrid">
+      <div id = "grid1">  
+      <div  class="contentDisplayGrid">
         <svg class="orangeBack display1 standardSquare"
            xmlns:dc="http://purl.org/dc/elements/1.1/"
            xmlns:cc="http://creativecommons.org/ns#"
@@ -287,6 +288,11 @@
           </g>
         </svg>
       </div>
+     </div>
+        
+        <div id = grid2></div>
+        <div id = grid3></div>
+        
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

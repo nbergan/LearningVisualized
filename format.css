@@ -288,6 +288,21 @@ footer{
     background-color:   #DCC7AA;
     min-height:500px;
 }
+#about2{
+    margin: 10%;
+    margin-right: 40%;
+    padding: 2%;
+    border-color: #6B7A8F;
+    border: 5px solid;
+}
+#about3{
+    position:absolute;
+    min-height: 300px;
+    width: 400px;
+    height: 484px;
+    bottom: -100px;
+    left: 50%;
+}
 #tutorials{
   display:inline-block;
   vertical-align: top;
@@ -297,10 +312,16 @@ footer{
 
 }
 .accent1{
-  min-height: 100px;
-  background-color: #F7882F;
-  width: 50%;
-  float: right;
+    min-height: 100px;
+    background-color: #DCC7AA;
+    width: 45%;
+    float: right;
+    position:relative;
+    top: 300px;
+    right: 720px;
+    border-color: grey;
+    border: 5x solid;
+    z-index: +2
 }
 .accent2{
   min-height: 100px;

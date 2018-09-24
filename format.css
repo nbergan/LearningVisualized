@@ -288,20 +288,34 @@ footer{
     background-color:   #DCC7AA;
     min-height:500px;
 }
-#about2{
-    margin: 10%;
-    margin-right: 40%;
-    padding: 2%;
-    border-color: #6B7A8F;
-    border: 5px solid;
+.aboutimg{
+	width: 200px;
+	height: 400px;
+	position:absolute;
 }
-#about3{
-    position:absolute;
-    min-height: 300px;
-    width: 400px;
-    height: 484px;
-    bottom: -100px;
-    left: 50%;
+.aboutwords{
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		max-width: 40%;
+		margin-top: 6%;
+		overflow:auto;
+		/* background-color: white; */
+		padding: 10px;
+}
+.aboutwords h3{
+	color: #6B7A8F;
+	max-width: 90%;
+}
+ .aboutimg{
+	position: relative;
+	display: block;
+	position: absolute;
+	z-index: 1000000;
+	margin: 0 auto;
+	margin-left: 35%;
+	margin-top: -6%;
+	/* background-color: #F7882F; */
 }
 #tutorials{
   display:inline-block;
@@ -312,19 +326,9 @@ footer{
 
 }
 .accent1{
-    min-height: 100px;
     background-color: #DCC7AA;
-    width: 45%;
-    float: right;
-    position:relative;
-    top: 300px;
-    right: 720px;
-    border-color: grey;
-    border: 5x solid;
-    z-index: +2
 }
 .accent2{
-  min-height: 100px;
   background-color: #F76331;
 }
 .tint

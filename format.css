@@ -259,12 +259,13 @@ body {
     margin-bottom: -5px;
 }
 footer{
-  display:inline-block;
-  vertical-align: top;
-  width: 100%;
-  min-height: 500px;
-  background-color: #AAAAAA;
-  padding: 0;
+    display:inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    min-height: 400px;
+    background-color: #AAAAAA;
+    padding: 0;
 }
 #heroVideo {
     right: 0;
@@ -288,20 +289,27 @@ footer{
     background-color:   #DCC7AA;
     min-height:500px;
 }
-#about2{
-    margin: 10%;
-    margin-right: 40%;
-    padding: 2%;
-    border-color: #6B7A8F;
-    border: 5px solid;
-}
-#about3{
-    position:absolute;
-    min-height: 300px;
-    width: 400px;
+#about_image{
+    position:relative;
+    min-height: 150px;
+    min-width: 200px;
+    width: 25%;
     height: 484px;
-    bottom: -100px;
-    left: 50%;
+    left: 60%;
+    border: 5px solid black;
+}
+#about4{
+    min-height: 100px;
+    background-color: transparent;
+    width: 45%;
+    float: right;
+    position:relative;
+    top: 200px;
+    right: 30%;
+    padding-right: 11%;
+    padding-bottom: 10%;
+    border-color: grey;
+    z-index: +2;
 }
 #tutorials{
   display:inline-block;
@@ -324,8 +332,8 @@ footer{
     z-index: +2
 }
 .accent2{
-  min-height: 100px;
-  background-color: #F76331;
+    min-height: 50px;
+    background-color: #F76331;
 }
 .tint
 {
@@ -489,6 +497,7 @@ span::before, span::after{
 }
 
 /* start of mobile css. only put mobile css below this */
+/* _____________________________________________________________________ */
 
 @media(max-width:1000px)
 {

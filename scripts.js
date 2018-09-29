@@ -52,8 +52,28 @@ function displayGrid(gridLocation){
             }
         } */
     }
-    
+
     else {
      document.getElementById(gridNumber).style.display = "none";
     }
 }
+
+function inView(el, offset) {
+        let scroll_top = window.pageYOffset || document.documentElement.scrollTop;
+        let rect = el.getBoundingClientRect();
+
+        let el_top = (rect.top + scroll_top - window.innerHeight);
+
+        return scroll_top > (el_top + offset);
+}
+$(window).scroll(function() {
+  var transitionElements = document.getElementsByClassName('trans');
+        // for(let j = 0; j < transitionElements.length; j++) {
+        //   transitionElements[j].classList.add('uw-transition');
+        // }
+        for(let j = 0; j < transitionElements.length; j++) {
+          if(inView(transitionElements[j], 20)) {
+            transitionElements[j].classList.add('transition');
+        }
+  }
+});

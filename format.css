@@ -6,6 +6,10 @@
 
  */
 
+.transition{
+	transform:translateY(-80px);
+	transition:transform .8s ease-in-out;
+}
 .contentDisplayGrid
 {
 	padding: 0;
@@ -592,4 +596,7 @@ span::before, span::after{
 
 #hero, #about, #tutorials{
   display: none;
+}
+.trans{
+	margin-top: 80px;
 }

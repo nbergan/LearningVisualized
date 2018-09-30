@@ -1,3 +1,6 @@
+// Author: Nathanial Bergan & Aaron Grode
+// Date: October 2018
+
 function goToVideos() {
     //TODO make it go to videos
 

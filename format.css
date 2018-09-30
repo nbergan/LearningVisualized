@@ -1,3 +1,6 @@
+/* Author: Nathanial Bergan & Aaron Grode */
+/* Date: October 2018 */ 
+
 /* Color scheme:
   main color:#6B7A8F;
   accents: #F7882F; and #F76331;
@@ -6,10 +9,12 @@
 
  */
 
-.transition{
+/* .transition{
 	transform:translateY(-80px);
 	transition:transform .8s ease-in-out;
-}
+} */
+
+
 .contentDisplayGrid
 {
 	padding: 0;
@@ -19,7 +24,7 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-		padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 @supports (display: grid) {
@@ -27,18 +32,18 @@
 		display: grid;
 		padding: 0;
 		margin: 0;
-		grid-template-columns: 20% 20% 20% 20%;
+		grid-template-columns: 20% 20% 20%;
 		justify-content: center;
 		padding-bottom: 20px;
 	}
 }
 /* start orange display */
 .orangeBack{
-  height: 100px;
+    height: 100px;
 	width: 100px;
 	padding: 10px;
 	overflow: hidden;
-  background-color: #F7882F;
+    background-color: #F7882F;
 }
 svg .orangeBack{
     fill:#6B7A8F;
@@ -155,23 +160,210 @@ svg:hover .yellowBack{
 }
 /* end largeSquare */
 /* every image we add to the grid needs both a unique class and an svg height and width and an orange */
+@keyframes rightFadeIn {
+  0% {
+    position: relative;
+    right: -5rem;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes leftFadeIn {
+  0% {
+    position: relative;
+    right: +5rem;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
 .display1{
   grid-column: 1;
   grid-row: 1;
 }
+.text1{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: rightFadeIn;
+    animation-delay: 1s;
+    animation-duration: 4s;  
+}
 
 .display2{
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 3;
+  grid-row: 2;
 }
+.text2{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
 .display3{
-  grid-column: 3 / span 4;
-  grid-row: 1 / span 2;
+  grid-column: 1;
+  grid-row: 3;
 }
+.text3{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: rightFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;   
+}
+
 .display4{
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 3;
+  grid-column: 3;
+  grid-row: 4;
 }
+.text4{
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display5{
+  grid-column: 1;
+  grid-row: 5;
+}
+.text5{
+    grid-column: 2;
+    grid-row: 5;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display6{
+  grid-column: 3;
+  grid-row: 6;
+}
+.text6{
+    grid-column: 2;
+    grid-row: 6;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display7{
+  grid-column: 1;
+  grid-row: 7;
+}
+.text7{
+    grid-column: 2;
+    grid-row: 7;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display8{
+  grid-column: 3;
+  grid-row: 8;
+}
+.text8{
+    grid-column: 2;
+    grid-row: 8;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display9{
+  grid-column: 1;
+  grid-row: 9;
+}
+.text9{
+    grid-column: 2;
+    grid-row: 9;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display10{
+  grid-column: 3;
+  grid-row: 10;
+}
+.text10{
+    grid-column: 2;
+    grid-row: 10;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
+.display11{
+  grid-column: 1;
+  grid-row: 11;
+}
+.text11{
+    grid-column: 2;
+    grid-row: 11;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+    animation-name: leftFadeIn;
+    animation-delay: 2s;
+    animation-duration: 4s;    
+}
+
 .ml9 {
   display: block;
   margin: 0 auto;
@@ -316,10 +508,10 @@ footer{
     z-index: +2;
 }
 #tutorials{
-  display:inline-block;
-  vertical-align: top;
-  width: 100%;
-  background-color: #6B7A8F;
+    display:inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: #6B7A8F;
     min-height:500px;
 
 }

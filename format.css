@@ -121,6 +121,15 @@
     animation-duration: 12s;
 }
 
+.bubbles li:nth-child(8){
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 15%;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
 @keyframes circle {
     0%{
         -webkit-transform: translateY(0);
@@ -220,6 +229,7 @@ svg:hover .yellowBack{
   background-color: #DCC7AA;
   transition: all .3s linear;
 }
+
 /* end yellow */
 /* start of standard 100x100 square */
 .standardSquare
@@ -230,8 +240,29 @@ svg:hover .yellowBack{
   display: block;
   margin: 10px;
   padding: 0;
+    border-width: 5px;
+    border-style: outset;
+    border-color: #AAAAAA;
     border-radius: 50%;
+    box-shadow: 10px 10px 25px;
 }
+
+.standardSquare:hover{
+    box-shadow: 5px 5px 15px;
+}
+
+standardSquare:before{
+    content'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:40%;
+    height: 100%;
+    background: rgba(255,255,255, .5);
+    transition: .5s;
+    transform: skewX(-15deg);
+}
+
 /* end square */
 /* start of rectangle */
 .rectangle
@@ -242,7 +273,16 @@ svg:hover .yellowBack{
   display: block;
   margin: 10px;
   padding: 0;
-        border-radius: 50%;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: outset;
+    border-color: #AAAAAA;
+    border-radius: 50%;
+    box-shadow: 10px 10px 25px;
+}
+
+.rectangle:hover{
+    box-shadow: 5px 5px 15px;
 }
 /* end rectangle */
 /* start of largeSquare */
@@ -411,7 +451,7 @@ svg:hover .yellowBack{
    width: 100%;
    height: 100%;
    z-index: 10000000000;
-   background-color: #6B7A8F;
+background-color: #202020;
    background-position: center;
 }
 
@@ -558,6 +598,7 @@ footer{
 .accent2{
     min-height: 50px;
     background-color: #F76331;
+    z-index: 2;
 }
 
 .tutorialContent{

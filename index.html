@@ -24,15 +24,29 @@
   </h1>
 </div>
 <body>
+    
+    <!-- Bubbles Start -->
+    <ul class = "bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- Bubbles End -->
+    
     <div id = "hero" class="tint">
         <video autoplay muted loop id="heroVideo" >
-            <source src="NateRobot.mp4" type="video/mp4">
+            <source src="Ice_Bubble_Video.mp4" type="video/mp4">
+            <!-- Video by annca on Pixabay URL: https://videos.pexels.com/videos/bubble-turning-into-ice-855627 -->
         </video>
         <div class="videoContent">
             <h1>Learning Visualized</h1>
             <h3>Seeing the unseen world of code</h3>
             <div class="buttonsTop">
-              <button class="btn-6" onclick="goToVideos()"><span class="headSpan">Open Your Eyes!</span></button>
+              <button class="btn-6" onClick="document.getElementById('tutorials').scrollIntoView();"><span class="headSpan">Open Your Eyes!</span></button>
             </div>
         </div>
     </div>
@@ -40,36 +54,41 @@
    <div id = "about">
 
      <div id="about4">
-         <h3> Seeing something can be a powerful thing!</h3>  
-        <h3>We are using the power of visualization to help students learn code in ways they never could before. </h3> 
+        <h3> Seeing something can be a powerful thing!</h3>  
+        <h3>We are using the power of visualization to help students learn code in ways they never could before. </h3>
+        <h3>Explore the ways we are making learning an exquisite experience. </h3>
      </div>
      <div class="accent2"></div>
        <div id = "about_image" class="accent2">
-         <img src = "images/NateFaceless.png" alt = "Nate Faceless" width = 100% height = 100%>
+         <img src = "images/Orange_Bubbles.jpg" alt = "Nate Faceless" width = 100% height = 100%>
+           <!-- Photo by Sharon Pittaway on Unsplash URL: https://unsplash.com/photos/4_hFxTsmaO4  -->
      </div>
      <div class="accent2"></div>
     </div>
 
     <div id = "tutorials">
       <!-- <h2>Tutorials</h2> -->
+        <div class = "tutorialContent">
+            <h2>Tutorial Videos</h2>
+        </div> 
       <div class="buttons">
         <button onclick="displayGrid(0)" class="btn-6"><span>Basic Java</span></button>
         <button onclick="displayGrid(1)" class="btn-6"><span>Data Structures</span></button>
-        <button onclick="displayGrid(2)" class="btn-6"><span>Complex Methods</span></button>
+        <!-- <button onclick="displayGrid(2)" class="btn-6"><span>Complex Methods</span></button> -->
       </div>
       <div id = "grid1">
       <div  class="contentDisplayGrid trans">
-          <div class = "text1"> Variables</div>
-          <div class = "text2"> Data Structures</div>
-          <div class = "text3"> Operators</div>
-          <div class = "text4"> How a Compiler Works</div>
-          <div class = "text5"> Loops</div>
-          <div class = "text6"> Conditionals</div>
-          <div class = "text7"> Flow Charts</div>
-          <div class = "text8"> UML</div>
-          <div class = "text9"> Variables 2.0</div>
-          <div class = "text10"> Classes & Objects</div>
-          <div class = "text11"> Functions</div>
+          <div class = "text1 tutorial_Text"> Variables</div>
+          <div class = "text2 tutorial_Text"> Data Structures</div>
+          <div class = "text3 tutorial_Text"> Operators</div>
+          <div class = "text4 tutorial_Text"> How a Compiler Works</div>
+          <div class = "text5 tutorial_Text"> Loops</div>
+          <div class = "text6 tutorial_Text"> Conditionals</div>
+          <div class = "text7 tutorial_Text"> Flow Charts</div>
+          <div class = "text8 tutorial_Text"> UML</div>
+          <div class = "text9 tutorial_Text"> Variables 2.0</div>
+          <div class = "text10 tutorial_Text"> Classes & Objects</div>
+          <div class = "text11 tutorial_Text"> Functions</div>
           
         <img 
             class = "yellowBack display1 standardSquare"
@@ -87,7 +106,7 @@
           
           <img 
             class = "darkBack display3 rectangle"
-            src="images/Tutorial_Images/LVLogoBlack.svg" 
+            src="images/Tutorial_Images/Operators.svg" 
             alt="Compiler Image"
             height="87px"
             width="100px"/>
@@ -122,7 +141,7 @@
           
           <img 
             class = "redBack display8 standardSquare"
-            src="images/Tutorial_Images/LVLogoBlack.svg" 
+            src="images/Tutorial_Images/UML.svg" 
             alt="Data Types Image"
             height="87px"
             width="100px"/>

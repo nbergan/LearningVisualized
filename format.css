@@ -32,11 +32,106 @@
 		display: grid;
 		padding: 0;
 		margin: 0;
-		grid-template-columns: 20% 20% 20%;
-		justify-content: center;
-		padding-bottom: 20px;
+		grid-template-columns: 25% 25% 25%;
+		justify-content:center;
+		padding-bottom: 50px;
+        justify-items: center;
 	}
 }
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: translateZ(0);
+}
+
+.bubbles li{
+    position: absolute;
+    list-style: none;
+    display: block;
+    background-color: white;
+    opacity: 0.5;
+    bottom: -50px;
+    animation: circle 20s infinite;
+    transition-timing-function: linear;
+}
+
+.bubbles li:nth-child(1){
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 20%;
+}
+
+.bubbles li:nth-child(2){
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: 40%;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+.bubbles li:nth-child(3){
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 60%;
+    animation-delay: 4s;
+    animation-duration: 13s;
+}
+
+.bubbles li:nth-child(4){
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left: 80%;
+    animation-delay: 1s;
+    animation-duration: 22s;
+}
+
+.bubbles li:nth-child(5){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 50%;
+    animation-delay: 5s;
+    animation-duration: 15s;
+}
+
+.bubbles li:nth-child(6){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 10%;
+    animation-delay: 1s;
+    animation-duration: 11s;
+}
+
+.bubbles li:nth-child(7){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 90%;
+    animation-delay: 7s;
+    animation-duration: 12s;
+}
+
+@keyframes circle {
+    0%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(-1080px) rotate(630deg);
+        transform: translateY(-1080px) rotate(630deg);
+    }
+}
+
 /* start orange display */
 .orangeBack{
     height: 100px;
@@ -129,23 +224,25 @@ svg:hover .yellowBack{
 /* start of standard 100x100 square */
 .standardSquare
 {
-  height: 100px;
-  width: 95%;
+  height: 200px;
+  width: 50%;
   overflow: hidden;
   display: block;
   margin: 10px;
   padding: 0;
+    border-radius: 50%;
 }
 /* end square */
 /* start of rectangle */
 .rectangle
 {
-  height: 100px;
-  width: 95%;
+  height: 200px;
+  width: 50%;
   overflow: hidden;
   display: block;
   margin: 10px;
   padding: 0;
+        border-radius: 50%;
 }
 /* end rectangle */
 /* start of largeSquare */
@@ -188,100 +285,66 @@ svg:hover .yellowBack{
   }
 }
 
-.display1{
-  grid-column: 1;
-  grid-row: 1;
-}
-.text1{
-    grid-column: 2;
-    grid-row: 1;
+.tutorial_Text{
     text-align: center;
     color: white;
-    padding: 40px;
+    padding: 10px;
+    padding-bottom: 50px;
     font-size: 2em;
-    animation-name: rightFadeIn;
-    animation-delay: 1s;
-    animation-duration: 4s;  
+}
+
+.display1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.text1{
+    grid-column: 1;
+    grid-row: 2; 
 }
 
 .display2{
-  grid-column: 3;
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
 }
 .text2{
     grid-column: 2;
     grid-row: 2;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 1s;
-    animation-duration: 4s;
 }
 
 .display3{
-  grid-column: 1;
-  grid-row: 3;
+  grid-column: 3;
+  grid-row: 1;
 }
 .text3{
-    grid-column: 2;
-    grid-row: 3;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: rightFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;   
+    grid-column: 3;
+    grid-row: 2; 
 }
 
 .display4{
-  grid-column: 3;
-  grid-row: 4;
+  grid-column: 1;
+  grid-row: 3;
 }
 .text4{
-    grid-column: 2;
-    grid-row: 4;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-column: 1;
+    grid-row: 4;   
 }
 
 .display5{
-  grid-column: 1;
-  grid-row: 5;
+  grid-column: 2;
+  grid-row: 3;
 }
 .text5{
     grid-column: 2;
-    grid-row: 5;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-row: 4;   
 }
 
 .display6{
   grid-column: 3;
-  grid-row: 6;
+  grid-row: 3;
 }
 .text6{
-    grid-column: 2;
-    grid-row: 6;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-column: 3;
+    grid-row: 4;   
 }
 
 .display7{
@@ -289,79 +352,44 @@ svg:hover .yellowBack{
   grid-row: 7;
 }
 .text7{
-    grid-column: 2;
-    grid-row: 7;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-column: 1;
+    grid-row: 8;   
 }
 
 .display8{
-  grid-column: 3;
-  grid-row: 8;
+  grid-column: 2;
+  grid-row: 7;
 }
 .text8{
     grid-column: 2;
-    grid-row: 8;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-row: 8;   
 }
 
 .display9{
-  grid-column: 1;
-  grid-row: 9;
+  grid-column: 3;
+  grid-row: 7;
 }
 .text9{
-    grid-column: 2;
-    grid-row: 9;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-column: 3;
+    grid-row: 8;   
 }
 
 .display10{
-  grid-column: 3;
+  grid-column: 1;
   grid-row: 10;
 }
 .text10{
-    grid-column: 2;
-    grid-row: 10;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-column: 1;
+    grid-row: 11;   
 }
 
 .display11{
-  grid-column: 1;
-  grid-row: 11;
+  grid-column: 2;
+  grid-row: 10;
 }
 .text11{
     grid-column: 2;
-    grid-row: 11;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 2em;
-    animation-name: leftFadeIn;
-    animation-delay: 2s;
-    animation-duration: 4s;    
+    grid-row: 11;   
 }
 
 .ml9 {
@@ -464,10 +492,8 @@ footer{
     padding: 0;
 }
 #heroVideo {
-    right: 0;
-    bottom: 0;
     width: 100%;
-    height: 500px;
+    height: 100%;
     object-fit: fill;
 }
 .videoContent {
@@ -475,6 +501,8 @@ footer{
     top:0;
     color: #f1f1f1;
     padding: 20px;
+    padding-top: 10%;
+    padding-left: 50%;
     float: left;
     margin-left: 10%;
 }
@@ -490,17 +518,17 @@ footer{
     min-height: 150px;
     min-width: 200px;
     width: 25%;
-    height: 484px;
-    left: 60%;
-    border: 5px solid black;
+    height: 600px;
+    left: 62%;
+    border: 5px solid transparent;
 }
 #about4{
     min-height: 100px;
     background-color: transparent;
-    width: 45%;
+    width: 46%;
     float: right;
     position:relative;
-    top: 200px;
+    top: 150px;
     right: 30%;
     padding-right: 11%;
     padding-bottom: 10%;
@@ -531,6 +559,12 @@ footer{
     min-height: 50px;
     background-color: #F76331;
 }
+
+.tutorialContent{
+    text-align: center;
+    color: white;
+}
+
 .tint
 {
   position: relative;
@@ -574,6 +608,7 @@ footer{
   cursor: pointer;
   margin: 20px 30px;
   background: rgba(0,0,0,0.09);
+  margin-bottom: 50px;
   /* width: 20%; */
 }
 .buttons span{
@@ -789,6 +824,4 @@ span::before, span::after{
 #hero, #about, #tutorials{
   display: none;
 }
-.trans{
-	margin-top: 80px;
-}
+

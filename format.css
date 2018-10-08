@@ -65,6 +65,8 @@
     height: 40px;
     border-radius: 50%;
     left: 20%;
+    animation-delay: 2s;
+    animation-duration: 17s;
 }
 
 .bubbles li:nth-child(2){
@@ -104,8 +106,8 @@
 }
 
 .bubbles li:nth-child(6){
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     left: 10%;
     animation-delay: 1s;
@@ -175,11 +177,12 @@ svg .darkBack{
     fill:#F7882F;
     stroke:#AAAAAA;
     padding: 200px;
+    -webkit-transition: all .3s linear;
 }
 svg:hover .darkBack{
     fill:#AAAAAA;
     stroke:#F7882F;
-    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
 }
 .darkBack:hover{
   background-color: #F7882F;
@@ -245,10 +248,11 @@ svg:hover .yellowBack{
     border-color: #AAAAAA;
     border-radius: 50%;
     box-shadow: 10px 10px 25px;
+    transition: all .3s linear;
 }
 
 .standardSquare:hover{
-    box-shadow: 5px 5px 15px;
+    box-shadow: 3px 3px 10px;
 }
 
 standardSquare:before{
@@ -279,10 +283,11 @@ standardSquare:before{
     border-color: #AAAAAA;
     border-radius: 50%;
     box-shadow: 10px 10px 25px;
+    transition: all .3s linear;
 }
 
 .rectangle:hover{
-    box-shadow: 5px 5px 15px;
+    box-shadow: 3px 3px 10px;
 }
 /* end rectangle */
 /* start of largeSquare */

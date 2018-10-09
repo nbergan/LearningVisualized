@@ -9,34 +9,168 @@
 
  */
 
-/* .transition{
-	transform:translateY(-80px);
-	transition:transform .8s ease-in-out;
-} */
-
-
-.contentDisplayGrid
-{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-    padding-bottom: 20px;
+.newButton{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    background: black;
+    color: #ccc;
+    width: 240px;
+    height: 80px;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px solid green;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 3
 }
 
-@supports (display: grid) {
-	.contentDisplayGrid {
-		display: grid;
-		padding: 0;
-		margin: 0;
-		grid-template-columns: 25% 25% 25%;
-		justify-content:center;
-		padding-bottom: 50px;
-        justify-items: center;
-	}
+.newButton:hover{
+
+    cursor: pointer;
+}
+
+.newButton:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(0px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+.newButton:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+
+.newButton:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: 1s;
+}
+.newButton:hover:after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+h1
+{
+    font-size:  3.998em ;
+}
+h2
+{
+    font-size:  2.827em ;
+}
+h3
+{
+    font-size: 1.999em ;
+}
+h4
+{
+    font-size: 1.414em ;
+}
+h5{
+    font-size:  1.21em ;
+}
+p
+{
+    font-size: 1em;
+}
+h1, h2, h3, h4, p, h5, a, span
+{
+    font-family: 'Jockey One', sans-serif;
+}
+body {
+    margin:0;
+    padding:0;
+}
+
+/* PRELOADER - START -------------------------------*/
+
+.ml9 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+}
+
+.preloader {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 10000000000;
+background-color: #202020;
+   background-position: center;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* PRELOADER - END -------------------------------*/
+
+/* HERO - START -------------------------------*/
+
+#hero{
+    display:inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-height: 50%;
+    padding: 0;
+    margin-bottom: -5px;
+}
+#heroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.videoContent {
+    position: absolute;
+    top:0;
+    color: #f1f1f1;
+    padding: 20px;
+    padding-top: 10%;
+    padding-left: 50%;
+    float: left;
+    margin-left: 10%;
 }
 
 .bubbles{
@@ -66,7 +200,7 @@
     border-radius: 50%;
     left: 20%;
     animation-delay: 2s;
-    animation-duration: 17s;
+    animation-duration: 15s;
 }
 
 .bubbles li:nth-child(2){
@@ -75,7 +209,7 @@
     border-radius: 50%;
     left: 40%;
     animation-delay: 2s;
-    animation-duration: 17s;
+    animation-duration: 18s;
 }
 
 .bubbles li:nth-child(3){
@@ -84,7 +218,7 @@
     border-radius: 50%;
     left: 60%;
     animation-delay: 4s;
-    animation-duration: 13s;
+    animation-duration: 9s;
 }
 
 .bubbles li:nth-child(4){
@@ -102,7 +236,7 @@
     border-radius: 50%;
     left: 50%;
     animation-delay: 5s;
-    animation-duration: 15s;
+    animation-duration: 16s;
 }
 
 .bubbles li:nth-child(6){
@@ -120,7 +254,7 @@
     border-radius: 50%;
     left: 90%;
     animation-delay: 7s;
-    animation-duration: 12s;
+    animation-duration: 16s;
 }
 
 .bubbles li:nth-child(8){
@@ -128,8 +262,8 @@
     height: 20px;
     border-radius: 50%;
     left: 15%;
-    animation-delay: 2s;
-    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-duration: 9s;
 }
 
 @keyframes circle {
@@ -143,35 +277,154 @@
     }
 }
 
-/* start orange display */
-.orangeBack{
-    height: 100px;
-	width: 100px;
-	padding: 10px;
-	overflow: hidden;
-    background-color: #F7882F;
+/* CSS for hero button */
+.buttonsTop{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-left: 0;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-svg .orangeBack{
-    fill:#6B7A8F;
-    stroke:#F7882F;
-    padding: 200px;
+.buttonsTop button{
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 30px;
+  background: rgba(0,0,0,0.09);
 }
-svg:hover .orangeBack{
-    fill:#F7882F;
-    stroke:#6B7A8F;
-    transition: all .3s linear;
+
+.tint
+{
+  position: relative;
 }
-.orangeBack:hover{
-  background-color: #DCC7AA;
-  transition: all .3s linear;
+.tint:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0, 0.6);
+	transition: all .3s linear;
+    margin-bottom: 5px;
 }
-/* end orange */
+
+.tint h1, .tint h3, .tint a, .tint button{
+  position: relative;
+	z-index: 1;
+}
+
+/* HERO - END -------------------------------*/
+
+/* ABOUT - START -------------------------------*/
+
+#about{
+    display:inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: #AAAAAA;
+    min-height:500px;
+    z-index: 7;
+}
+#about_image{
+    position:relative;
+    min-height: 150px;
+    min-width: 200px;
+    width: 25%;
+    height: 600px;
+    left: 62%;
+    border-left: 20px solid #202020;
+    border-right: 20px solid #202020;
+}
+#about4{
+    min-height: 100px;
+    background-color: transparent;
+    width: 46%;
+    float: right;
+    position:relative;
+    top: 150px;
+    right: 30%;
+    padding-right: 11%;
+    padding-bottom: 10%;
+    z-index: 7;
+}
+.accent2{
+    min-height: 20px;
+    background-color: #202020;
+    z-index: 7;
+}
+
+/* ABOUT - END -------------------------------*/
+
+/* TUTORIALS - START -------------------------------*/
+
+#tutorials{
+    display:inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: #6B7A8F;
+    min-height:500px;
+    border-bottom: 20px solid #202020;
+}
+
+.tutorialContent{
+    text-align: center;
+    color: white;
+}
+
+.contentDisplayGrid
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+    padding-bottom: 20px;
+}
+
+@supports (display: grid) {
+	.contentDisplayGrid {
+		display: grid;
+		padding: 0;
+		margin: 0;
+		grid-template-columns: 25% 25% 25%;
+		justify-content:center;
+		padding-bottom: 50px;
+        justify-items: center;
+	}
+}
+
 /* start dark display */
 .darkBack{
-  height: 100px;
+    height: 100px;
 	width: 100px;
 	overflow: hidden;
-  background-color: #AAAAAA;
+    
+    /* *** WORKING *** */
+    /* *** WORKING *** */
+    
+    background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+    
+    /* *** WORKING *** */
+    /* *** WORKING *** */
 }
 svg .darkBack{
     fill:#F7882F;
@@ -185,16 +438,23 @@ svg:hover .darkBack{
     -webkit-transition: all .3s linear;
 }
 .darkBack:hover{
-  background-color: #F7882F;
-  transition: all .3s linear;
+    background-color: #F7882F;
+    transition: all .3s linear;
 }
 /* end dark */
+
 /* start red display */
 .redBack{
   height: 100px;
 	width: 100px;
 	overflow: hidden;
-  background-color: #F76331;
+    
+    /* *** WORKING *** */
+    /* *** WORKING *** */
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+    
+    /* *** WORKING *** */
+    /* *** WORKING *** */
 }
 svg .redBack{
     fill:#6B7A8F;
@@ -203,14 +463,15 @@ svg .redBack{
 }
 svg:hover .redBack{
     fill:#F76331;
-    stroke:#DCC7AA;
+    stroke:#F76331;
     transition: all .3s linear;
 }
 .redBack:hover{
-  background-color: #DCC7AA;
+  background-color: #F76331;
   transition: all .3s linear;
 }
 /* end red */
+
 /* start yellow display */
 .yellowBack{
   height: 100px;
@@ -232,8 +493,8 @@ svg:hover .yellowBack{
   background-color: #DCC7AA;
   transition: all .3s linear;
 }
-
 /* end yellow */
+
 /* start of standard 100x100 square */
 .standardSquare
 {
@@ -262,9 +523,10 @@ standardSquare:before{
     left:0;
     width:40%;
     height: 100%;
-    background: rgba(255,255,255, .5);
+    background: rgba(255,255,255, .7);
     transition: .5s;
     transform: skewX(-15deg);
+    z-index: 2;
 }
 
 /* end square */
@@ -290,45 +552,6 @@ standardSquare:before{
     box-shadow: 3px 3px 10px;
 }
 /* end rectangle */
-/* start of largeSquare */
-.largeSquare
-{
-  height: 350px;
-  width: 97%;
-  overflow: hidden;
-  display: block;
-  margin: 10px;
-  padding: 0;
-}
-/* end largeSquare */
-/* every image we add to the grid needs both a unique class and an svg height and width and an orange */
-@keyframes rightFadeIn {
-  0% {
-    position: relative;
-    right: -5rem;
-    opacity: 0;
-  }
-
-  100% {
-    position: relative;
-    right: 0rem;
-    opacity: 1;
-  }
-}
-
-@keyframes leftFadeIn {
-  0% {
-    position: relative;
-    right: +5rem;
-    opacity: 0;
-  }
-
-  100% {
-    position: relative;
-    right: 0rem;
-    opacity: 1;
-  }
-}
 
 .tutorial_Text{
     text-align: center;
@@ -437,201 +660,6 @@ standardSquare:before{
     grid-row: 11;   
 }
 
-.ml9 {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 100%;
-}
-
-.preloader {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 10000000000;
-background-color: #202020;
-   background-position: center;
-}
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
-}
-
-
-h1
-{
-    font-size:  3.998em ;
-}
-h2
-{
-    font-size:  2.827em ;
-}
-h3
-{
-    font-size: 1.999em ;
-}
-h4
-{
-    font-size: 1.414em ;
-}
-h5{
-    font-size:  1.21em ;
-}
-p
-{
-    font-size: 1em;
-}
-h1, h2, h3, h4, p, h5, a, span
-{
-    font-family: 'Jockey One', sans-serif;
-}
-body {
-    margin:0;
-    padding:0;
-}
-.navButton{
-    background-color: transparent;
-    color: white;
-    border: 2px solid #DCC7AA;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-#hero{
-    display:inline-block;
-    vertical-align: top;
-    width: 100%;
-    max-height: 50%;
-    padding: 0;
-    margin-bottom: -5px;
-}
-footer{
-    display:inline-block;
-    vertical-align: top;
-    text-align: center;
-    width: 100%;
-    min-height: 400px;
-    background-color: #AAAAAA;
-    padding: 0;
-}
-#heroVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-.videoContent {
-    position: absolute;
-    top:0;
-    color: #f1f1f1;
-    padding: 20px;
-    padding-top: 10%;
-    padding-left: 50%;
-    float: left;
-    margin-left: 10%;
-}
-#about{
-    display:inline-block;
-    vertical-align: top;
-    width: 100%;
-    background-color:   #DCC7AA;
-    min-height:500px;
-}
-#about_image{
-    position:relative;
-    min-height: 150px;
-    min-width: 200px;
-    width: 25%;
-    height: 600px;
-    left: 62%;
-    border: 5px solid transparent;
-}
-#about4{
-    min-height: 100px;
-    background-color: transparent;
-    width: 46%;
-    float: right;
-    position:relative;
-    top: 150px;
-    right: 30%;
-    padding-right: 11%;
-    padding-bottom: 10%;
-    border-color: grey;
-    z-index: +2;
-}
-#tutorials{
-    display:inline-block;
-    vertical-align: top;
-    width: 100%;
-    background-color: #6B7A8F;
-    min-height:500px;
-
-}
-.accent1{
-    min-height: 100px;
-    background-color: #DCC7AA;
-    width: 45%;
-    float: right;
-    position:relative;
-    top: 300px;
-    right: 720px;
-    border-color: grey;
-    border: 5x solid;
-    z-index: +2
-}
-.accent2{
-    min-height: 50px;
-    background-color: #F76331;
-    z-index: 2;
-}
-
-.tutorialContent{
-    text-align: center;
-    color: white;
-}
-
-.tint
-{
-  position: relative;
-}
-.tint:after
-{
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0, 0.6);
-	transition: all .3s linear;
-  margin-bottom: 5px;
-}
-
-.tint h1, .tint h3, .tint a, .tint button{
-  position: relative;
-	z-index: 1000000;
-}
 .buttons{
   display: table-cell;
   vertical-align: middle;
@@ -661,6 +689,25 @@ footer{
   display: block;
   padding: 25px 80px;
 }
+
+/* TUTORIALS - END ------------------------------*/
+
+/* FOOTER - START -------------------------------*/
+
+footer{
+    display:inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    min-height: 400px;
+    background-color: #AAAAAA;
+    padding: 0;
+}
+
+/* FOOTER - END ------------------------------*/
+
+/* BUTTONS - START ------------------------------*/
+
 .buttons button::before, button::after{
   content:"";
   width: 0;
@@ -712,37 +759,6 @@ span::before, span::after{
   top: 0;
 }
 
-/* CSS for hero button */
-.buttonsTop{
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  padding-left: 0;
-  background-color: transparent;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.buttonsTop button{
-  display: inline-block;
-  position: relative;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 20px 30px;
-  background: rgba(0,0,0,0.09);
-}
 .buttons span, .buttonsTop span{
   display: block;
   padding: 25px 80px;
@@ -769,11 +785,20 @@ span::before, span::after{
 .buttonsTop button:hover span::before, button:hover span::after{
   height: 100%;
 }
-.headSpan span{
 
-}
+/* BUTTONS - END -------------------------------*/
 
-/* start of mobile css. only put mobile css below this */
+
+
+
+
+
+
+
+
+
+
+/* start of MOBILE css. only put mobile css below this */
 /* _____________________________________________________________________ */
 
 @media(max-width:1000px)

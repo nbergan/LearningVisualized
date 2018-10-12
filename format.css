@@ -9,69 +9,7 @@
 
  */
 
-.newButton{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
-    background: black;
-    color: #ccc;
-    width: 240px;
-    height: 80px;
-    border: 1px solid #338033;
-    font-size: 18px;
-    border-radius: 4px solid green;
-    transition: .6s;
-    overflow: hidden;
-    z-index: 3
-}
-
-.newButton:hover{
-
-    cursor: pointer;
-}
-
-.newButton:before{
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255,255,255,.5);
-    width: 60px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .5;
-    filter: blur(0px);
-    transform: translateX(-130px) skewX(-15deg);
-}
-
-.newButton:after{
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255,255,255,.2);
-    width: 30px;
-    height: 100%;
-    left: 30px;
-    top: 0;
-    opacity: 0;
-    filter: blur(50px);
-    transform: translateX(-100px) skewX(-15deg);
-}
-
-.newButton:hover:before{
-    transform: translateX(300px) skewX(-15deg);
-    opacity: .6;
-    transition: 1s;
-}
-.newButton:hover:after{
-    transform: translateX(300px) skewX(-15deg);
-    opacity: 1;
-    transition: 1s;
-}
-
+/* START OF CSS CODE */
 
 h1
 {
@@ -187,7 +125,8 @@ background-color: #202020;
     position: absolute;
     list-style: none;
     display: block;
-    background-color: white;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0) 55%, rgba(255, 255, 255, 0.7));
+    border: 2px solid rgba(255,255,255,.2);
     opacity: 0.5;
     bottom: -50px;
     animation: circle 20s infinite;
@@ -272,8 +211,8 @@ background-color: #202020;
         transform: translateY(0);
     }
     100%{
-        -webkit-transform: translateY(-1080px) rotate(630deg);
-        transform: translateY(-1080px) rotate(630deg);
+        -webkit-transform: translateY(-1080px) rotate(-45deg);
+        transform: translateY(-1080px) rotate(-45deg);
     }
 }
 
@@ -412,98 +351,35 @@ background-color: #202020;
 	}
 }
 
-/* start dark display */
-.darkBack{
-    height: 100px;
-	width: 100px;
-	overflow: hidden;
-    
-    /* *** WORKING *** */
-    /* *** WORKING *** */
-    
-    background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
-    
-    /* *** WORKING *** */
-    /* *** WORKING *** */
-}
-svg .darkBack{
-    fill:#F7882F;
-    stroke:#AAAAAA;
-    padding: 200px;
-    -webkit-transition: all .3s linear;
-}
-svg:hover .darkBack{
-    fill:#AAAAAA;
-    stroke:#F7882F;
-    -webkit-transition: all .3s linear;
-}
-.darkBack:hover{
-    background-color: #F7882F;
-    transition: all .3s linear;
-}
-/* end dark */
+/* start tutorial_video_button */
 
-/* start red display */
-.redBack{
+.tutorial_video_button{
   height: 100px;
 	width: 100px;
 	overflow: hidden;
-    
-    /* *** WORKING *** */
-    /* *** WORKING *** */
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
-    
-    /* *** WORKING *** */
-    /* *** WORKING *** */
+  background-color: #AAAAAA;
 }
-svg .redBack{
-    fill:#6B7A8F;
-    stroke:#F76331;
-    padding: 200px;
-}
-svg:hover .redBack{
-    fill:#F76331;
-    stroke:#F76331;
-    transition: all .3s linear;
-}
-.redBack:hover{
-  background-color: #F76331;
-  transition: all .3s linear;
-}
-/* end red */
-
-/* start yellow display */
-.yellowBack{
-  height: 100px;
-	width: 100px;
-	overflow: hidden;
-  background-color: #F7C331;
-}
-svg .yellowBack{
-    fill:#6B7A8F;
-    stroke:#F7C331;
-    padding: 200px;
-}
-svg:hover .yellowBack{
+svg:hover .tutorial_video_button{
     fill:#DCC7AA;
     stroke:#F7C331;
     transition: all .3s linear;
 }
-.yellowBack:hover{
-  background-color: #DCC7AA;
+.tutorial_video_button:hover{
+  background-color: #F7882F;
   transition: all .3s linear;
 }
-/* end yellow */
 
-/* start of standard 100x100 square */
-.standardSquare
+/* end tutorial_video_button */
+
+/* start of standard_circle */
+.standard_circle
 {
-  height: 200px;
-  width: 50%;
-  overflow: hidden;
-  display: block;
-  margin: 10px;
-  padding: 0;
+    height: 200px;
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 10px;
+    padding: 0;
     border-width: 5px;
     border-style: outset;
     border-color: #AAAAAA;
@@ -512,46 +388,119 @@ svg:hover .yellowBack{
     transition: all .3s linear;
 }
 
-.standardSquare:hover{
+.standard_circle:hover{
     box-shadow: 3px 3px 10px;
+    cursor: pointer;
 }
 
-standardSquare:before{
-    content'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:40%;
+.standard_circle:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
     height: 100%;
-    background: rgba(255,255,255, .7);
-    transition: .5s;
-    transform: skewX(-15deg);
-    z-index: 2;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(0px);
+    transform: translateX(-130px) skewX(-15deg);
 }
 
-/* end square */
-/* start of rectangle */
-.rectangle
-{
-  height: 200px;
-  width: 50%;
-  overflow: hidden;
-  display: block;
-  margin: 10px;
-  padding: 0;
-    border-radius: 50%;
-    border-width: 5px;
-    border-style: outset;
-    border-color: #AAAAAA;
-    border-radius: 50%;
-    box-shadow: 10px 10px 25px;
-    transition: all .3s linear;
+.standard_circle:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateX(-100px) skewX(-15deg);
 }
 
-.rectangle:hover{
-    box-shadow: 3px 3px 10px;
+.standard_circle:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: 1s;
 }
-/* end rectangle */
+.standard_circle:hover:after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 1s;
+}
+
+/* WHY SHINY... WHY YOU NO WORK!? */
+
+.newButton{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    background: black;
+    color: #ccc;
+    width: 240px;
+    height: 240px;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px solid green;
+    transition: .6s;
+    overflow: hidden;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.newButton:hover{
+
+    cursor: pointer;
+}
+
+.newButton:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(0px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+.newButton:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+
+.newButton:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: 1s;
+}
+.newButton:hover:after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+/* end standard_circle */
+
 
 .tutorial_Text{
     text-align: center;

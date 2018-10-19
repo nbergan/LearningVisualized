@@ -7,7 +7,7 @@ function goToVideos() {
 
 }
 $(window).load(function() {
-  window.setInterval(loadContent, 3500)
+  window.setInterval(loadContent, 3000)
 });
 
 function loadContent(){

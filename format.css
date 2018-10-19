@@ -113,6 +113,7 @@ background-color: #202020;
 
 .bubbles{
     position: absolute;
+    padding:0;
     top: 0;
     left: 0;
     width: 100%;
